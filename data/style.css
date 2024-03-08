@@ -29,7 +29,7 @@ h3{
 iframe{
   border-style: none;
   width: 100%;
-  height: 145vw;
+  height: 100%;
 }
 img{
   font-size:0;
@@ -45,7 +45,7 @@ img{
 .juxta{
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items:stretch;
   background-color: #dbedf0;
 }
 article{
