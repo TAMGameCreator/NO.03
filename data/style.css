@@ -39,7 +39,7 @@ img{
 .contents{
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items:stretch;
   background-color: #dbedf0;
 }
 .juxta{
