@@ -13,7 +13,7 @@
            <h1 style=text align = "center">TAMGameCreator ゲームの部屋</h1>
          </header>
          <div class="contents">
-           <article>
+           <article id="article">
              <div class="text" style="background-color:cyan;">第三回(2025/06/10)</div>
              <h2>挨拶</h2>
              <div class="text">こんにちは。TAMです。</div>
@@ -82,7 +82,7 @@
              </div>
            </article>
            <aside>
-             <iframe src="https://tamgamecreator.github.io/update/"width="100%"></iframe>
+             <iframe src="https://tamgamecreator.github.io/update/"width="100%" id="resizableIframe"></iframe>
            </aside>
          </div>
          <div class="contents end">
@@ -95,5 +95,19 @@
              <a href="http://TAMGameCreator.github.io/NO.04" class="Line-Item">第四回</a>
            </div>
          </div>
+              
+         <script>
+         window.addEventListener('message', (e) => {
+           if (e.data.hasOwnProperty('iframeHeight')) {
+             const iframe = document.getElementById('resizableIframe'); // resizableIframeはiframeのID名に置き換える
+             if(document.getElementById('article').style.height < e.data.iframeHeight){
+               iframe.style.height = `${e.data.iframeHeight + 50}px`;
+             }
+             else{
+               iframe.style.height = document.getElementById('article').style.height;
+             }
+           }
+         });
+         </script>
        </body>
 </html>
